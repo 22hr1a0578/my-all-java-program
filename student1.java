@@ -1,19 +1,26 @@
-class student1{
-int id;
+class student{
+int rollno;
 String name;
-student1(int i,String n){
-id=i;
+static String college="MTIET";
+static void college(){
+college="vani";
+}
+student(int r,String n)
+{
+rollno=r;
 name=n;
 }
-student1(){}
-void display()
-{
-System.out.println(id+" "+name);}
+void display(){
+System.out.println(rollno+" "+name+" "+college);
+}
 public static void main(String args[]){
-student1 s1=new student1(123,"latha");
-student1 s2=new student1();
-s2.id=s1.id;
-s2.name=s1.name;
+student s=new student(100,"latha");
+s.display();
+
+student s1=new student(123,"shree");
+student.college();//calling change method
+student s2=new student(1234,"lathashree");
+//s.display();
 s1.display();
 s2.display();
 }

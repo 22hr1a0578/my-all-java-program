@@ -1,26 +1,35 @@
-class array{
-public static void main(String args[]){
-//creat and array
-int[] age={1,2,4,5,2,5};
-//access each array elements via index
-System.out.println("Accessing elements of Array");
-System.out.println("first Element:"+age[0]);
-System.out.println("second Element:"+age[1]);
-System.out.println("third Element:"+age[2]);
-System.out.println("fourth Element:"+age[3]);
-System.out.println("fifth Element:"+age[4]);
-System.out.println("for each loop");
-System.out.println("\n");
-for(int a:age)//for each loop
-{
-System.out.println(a);
+import java.util.*;
+class student{
+private int id;
+private String name;
+private String departement;
+public void setId(int id){
+this.id=id;
 }
-System.out.println("\n");
+public void setName(String name){
+this.name=name;}
+public void setDepartement(String departement){
+this.departement=departement;}
+public int getId(){return this.id;}
+public String getName(){return this.name;}
+public String getDepartement(){return this.departement;}
+}
+class Day8Program{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+student[] ob= new student[5];
+for(int i=0;i<5;i++){
+ob[i]=new student();
+ob[i].setId(sc.nextInt());
+ob[i].setName(sc.next());
+ob[i].setDepartement(sc.next());
+}
+System.out.println("Detail are:\n");
+for(int j=0;j<5;j++){
+System.out.println("ID:"+ob[j].getId());
+System.out.println("NAME:"+ob[j].getName());
+System.out.println("DEPARTEMENT:"+ob[j].getDepartement());
 
-System.out.println("for loop");
-for(int i=0;i<age.length;i++)//for loop
-{
-System.out.println(age[i]);
 }
 }
 }
