@@ -1,11 +1,16 @@
-import java.util.Scanner;
+import java.io.*;
 class Test{
-public static void main(String args[]){
-Scanner sc=new Scanner(System.in);
-char c=sc.next().charAt(0);
-if((c=='a')||(c=='e')||(c=='i')||(c=='o')||(c=='u'))
-System.out.print("vowel");
-else
-System.out.println("not a vowel");
+	public static void main(String args[])
+	{
+		int i=10;
+//weldeing typecasting(automic casting)
+//from int to long
+long l=i;
+//weldeing typecasting(automic casting)
+//from int to double
+double d=i;
+System.out.println("interger:"+i);
+System.out.println("long:"+l);
+System.out.println("double:"+d);
 }
-}0
+}
