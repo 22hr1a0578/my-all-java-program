@@ -1,35 +1,30 @@
 import java.util.*;
-class student{
-private int id;
-private String name;
-private String departement;
-public void setId(int id){
-this.id=id;
+class ArrayToMethod{
+public int max(int[] array){
+int max=0;
+for(int i=0;i<array.length;i++){
+if(array[i]>max){
+max=array[i];}
 }
-public void setName(String name){
-this.name=name;}
-public void setDepartement(String departement){
-this.departement=departement;}
-public int getId(){return this.id;}
-public String getName(){return this.name;}
-public String getDepartement(){return this.departement;}
+return max;
 }
-class Day8Program{
+public int min(int[] array){
+int min=array[0];
+for(int i=0;i<array.length;i++){
+if(array[i]<min){
+min=array[i];}
+}
+return min;
+}
 public static void main(String args[]){
 Scanner sc=new Scanner(System.in);
-student[] ob= new student[5];
-for(int i=0;i<5;i++){
-ob[i]=new student();
-ob[i].setId(sc.nextInt());
-ob[i].setName(sc.next());
-ob[i].setDepartement(sc.next());
-}
-System.out.println("Detail are:\n");
-for(int j=0;j<5;j++){
-System.out.println("ID:"+ob[j].getId());
-System.out.println("NAME:"+ob[j].getName());
-System.out.println("DEPARTEMENT:"+ob[j].getDepartement());
-
-}
+System.out.println("enter the size of the array that is created:");
+int size=sc.nextInt();
+int[] myArray=new int[size];
+System.out.println("Enter the elements of the array: ");
+for(int i=0;i<size;i++){myArray[i]=sc.nextInt();}
+ArrayToMethod m=new ArrayToMethod();
+System.out.println("maximum value in the arrayis: "+m.max(myArray));
+System.out.println("minimum value in the array in: "+m.min(myArray));
 }
 }

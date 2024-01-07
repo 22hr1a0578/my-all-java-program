@@ -1,13 +1,15 @@
 class Employee
 {
-	int Enum;
-	String Ename;
+float salary=40000;
 }
-class TestEmployee
+class prog extends Employee
 {
-	public static void main(String args[]){
-	Employee s1=new Employee();
-	System.out.println(s1.Enum);
-	System.out.println(s1.Ename);
+	int bonus=10000;
+	public static void main(String args[])
+	{
+		prog p=new prog();
+		System.out.println("Programmer salary: "+p.salary);
+		System.out.println("Programmer bonus: "+p.bonus);
+	}
 }
-}
+		

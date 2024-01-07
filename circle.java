@@ -1,18 +1,19 @@
+class operation{
+int square(int n){
+return n*n;
+}
+}
 class circle{
-	int radius;
-	void detail(int r){
-		radius=r;
-	}
-void display()
-{
-System.out.println(3.14*radius*radius);
+operation op;
+double pi=3.14;
+double area(int radius){
+op=new operation();
+int rsquare=op.square(radius);
+return pi*rsquare;
 }
-}
-class Testcircle{
-	public static void main(String args[])
-	{
-		circle c=new circle();
-		c.detail(1);
-		c.display();
+public static void main(String args[]){
+circle c= new circle();
+double result=c.area(5);
+System.out.println(result);
 }
 }
